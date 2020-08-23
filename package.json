@@ -11,19 +11,25 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "cy:open": "cypress open",
+    "test:e2e:CI": "cypress run --reporter mochawesome --reporter-options 'reportDir=test/cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss'",
+    "test:e2e:report:merge": "mochawesome-merge 'test/cypress/report/mochawesome-report/*.json' > test/cypress/report/mochawesome.json"
   },
   "dependencies": {
-    "gatsby": "^2.24.41",
-    "gatsby-image": "^2.4.16",
-    "gatsby-plugin-sharp": "^2.6.27",
-    "gatsby-source-filesystem": "^2.3.24",
-    "gatsby-transformer-sharp": "^2.5.13",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "@material-ui/core": "latest",
+    "gatsby": "latest",
+    "gatsby-image": "latest",
+    "gatsby-plugin-material-ui": "latest",
+    "gatsby-plugin-sharp": "latest",
+    "gatsby-source-filesystem": "latest",
+    "gatsby-transformer-sharp": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet": "latest"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "latest"
   },
   "repository": {
     "type": "git",
